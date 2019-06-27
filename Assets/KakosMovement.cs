@@ -6,7 +6,7 @@ public class KakosMovement : MonoBehaviour
 {
     public Rigidbody rb;
     public float ForwardForce;
-    private float distanceToCull = 12f;
+    private float distanceToCull = 5f;
 
     private void FixedUpdate()
     {
@@ -23,7 +23,6 @@ public class KakosMovement : MonoBehaviour
             //Perhaps ensure it's far enough away
             if (vectorToItem.sqrMagnitude > distanceToCull * distanceToCull)
             {
-                Debug.Log("YESSSS");
                 Destroy(gameObject);
             }
         }

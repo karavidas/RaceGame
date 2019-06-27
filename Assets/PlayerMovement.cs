@@ -10,14 +10,14 @@ public class PlayerMovement : MonoBehaviour
         float vrRoll = Camera.main.transform.eulerAngles.z;
         transform.position = transform.position + transform.forward * playerSpeed * Time.deltaTime;
 
-         if (vrRoll >= (20) && vrRoll<=(80))
-        {
-            transform.Translate(-0.1f, 0f, 0f);
-        }
-
-        if (vrRoll <= (340) && vrRoll >= (280))
+         if (vrRoll >= (10) && vrRoll<=(80))
         {
             transform.Translate(0.1f, 0f, 0f);
+        }
+
+        if (vrRoll <= (350) && vrRoll >= (280))
+        {
+            transform.Translate(-0.1f, 0f, 0f);
         }
     }
 }
